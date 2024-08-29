@@ -21,11 +21,6 @@ class CategoryController extends Controller
         return response()->json($this->category->getResults($request->name));
     }
     
-    public function create()
-    {
-        
-    }
-    
     public function store(Request $request)
     {
         return response()->json($this->category->create($request->all()), Response::HTTP_CREATED);
